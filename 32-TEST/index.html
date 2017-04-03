@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>饿了么</title>
+    <script src="./vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" @input="inputMethod" v-model="input">
+      {{value}}
+    </div>
+  </body>
+  <script>
+    var app=new Vue({
+      el:"#app",
+      data:{
+        input:'',
+        value:''
+      },
+      methods:{
+        inputMethod:function(){
+          console.log(this.input);
+            this.value=this.input;
+        }
+      }
+    })
+  </script>
+</html>
